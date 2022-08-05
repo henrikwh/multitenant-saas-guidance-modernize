@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>Tailspin.Surveys.Common Class Library</Description>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Tailspin.Surveys.Common</AssemblyName>
     <PackageId>Tailspin.Surveys.Common</PackageId>
   </PropertyGroup>

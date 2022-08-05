@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>Tailspin.Surveys.Tests Class Library</Description>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Tailspin.Surveys.Tests</AssemblyName>
     <PackageId>Tailspin.Surveys.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
