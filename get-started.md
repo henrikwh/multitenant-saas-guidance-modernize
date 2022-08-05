@@ -13,8 +13,9 @@ Here is a summary of the steps:
 
 ## Prerequisites
 
-- Visual Studio 2019 installed
+- Visual Studio 2022 installed
 - [Microsoft Azure](https://azure.microsoft.com/en) account
+- [Entity Framework Core tools](https://docs.microsoft.com/en-us/ef/core/cli/dotnet#installing-the-tools)
 
 ## Create the Tailspin tenant
 
@@ -269,6 +270,32 @@ For more information about creating a Redis cache, see [Quickstart: Use Azure Ca
    }
    ```
 
+## Set application settings 
+
+1. Open the appsettings.json file in Tailspin.Surveys.Web
+
+2. Paste the following:
+
+
+   ```json
+   {
+    "SurveyApi": {
+    "BaseUrl": "https://localhost:44301",
+    "Scopes": "https://<domain>.onmicrosoft.com/surveys.webapi/surveys.access",
+    "Name": "SurveyApi"
+    },
+    "Data": {
+    "SurveysConnectionString": "Server(localdb)\\MSSQLLocalDB;Database=Tailspin.SurveysDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+    },
+    "KeyVaultName": "See Optional step in later"
+   }
+   ```
+
+Replace the items shown in angle brackets, as follows:
+
+  - `Scopes`:  Add the domain name. This is the scope created earlier.
+  - `KeyVaultName`:  Add the domain name. This is the scope created earlier.
+
 ## Initialize the database
 
 In this step, you will use Entity Framework 7 to create a local SQL database, using LocalDB.
@@ -282,6 +309,8 @@ In this step, you will use Entity Framework 7 to create a local SQL database, us
    ```bat
    dotnet ef database update --startup-project ..\Tailspin.Surveys.Web
    ```
+   
+
 
 ## Run the application
 
